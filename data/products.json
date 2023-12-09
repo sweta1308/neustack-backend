@@ -1,0 +1,82 @@
+[
+  {
+    "item": "Sunglasses",
+    "price": 546
+  },
+  {
+    "item": "Watch",
+    "price": 1260
+  },
+  {
+    "item": "Shoes",
+    "price": 3000
+  },
+  {
+    "item": "Laptop",
+    "price": 60000
+  },
+  {
+    "item": "Mobile",
+    "price": 29800
+  },
+  {
+    "item": "TV",
+    "price": 20000
+  },
+  {
+    "item": "Tops",
+    "price": 1000
+  },
+  {
+    "item": "Jeans",
+    "price": 1500
+  },
+  {
+    "item": "Shirt",
+    "price": 1200
+  },
+  {
+    "item": "Trousers",
+    "price": 3100
+  },
+  {
+    "item": "Earphone",
+    "price": 1800
+  },
+  {
+    "item": "Bracelet",
+    "price": 200
+  },
+  {
+    "item": "Straightner",
+    "price": 2700
+  },
+  {
+    "item": "Curtains",
+    "price": 1900
+  },
+  {
+    "item": "Table",
+    "price": 3000
+  },
+  {
+    "item": "Chair",
+    "price": 1600
+  },
+  {
+    "item": "Stationary",
+    "price": 450
+  },
+  {
+    "item": "Helmet",
+    "price": 500
+  },
+  {
+    "item": "Heels",
+    "price": 1100
+  },
+  {
+    "item": "Charger",
+    "price": 300
+  }
+]
