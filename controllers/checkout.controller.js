@@ -26,6 +26,7 @@ const checkout = async () => {
       0
     );
     newObj.totalItems = totalProducts;
+    user[0].cart = [];
     user[0].orders = [{ ...newObj }, ...user[0].orders];
     const updatedUser = await user[0].save();
     return updatedUser;

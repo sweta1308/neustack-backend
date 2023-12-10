@@ -16,7 +16,6 @@ const generateCoupon = async () => {
 const generateStats = async () => {
   try {
     const user = await User.find({});
-    user[0].cart = [];
     if (user[0].orders[0].discountEligible) {
       user[0].orders[0].totalDiscountAmount = user[0].orders[0].totalAmount * 0.9;
     }
