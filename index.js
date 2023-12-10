@@ -7,25 +7,18 @@ const cors = require("cors");
 const helmet = require("helmet");
 const app = express();
 
-const authRouter = require("./routes/auth.route");
 const productRouter = require("./routes/product.route");
 const cartRouter = require("./routes/cart.route");
 const adminRouter = require("./routes/admin.route");
-const {
-  authVerify,
-  errorHandler,
-  routeNotFound,
-} = require("./middlewares/index");
 
 app.use(cors());
 
 app.use(helmet());
 
 app.use(express.json());
-app.use("/auth", authRouter);
 app.use("/products", productRouter);
-app.use("/cart", authVerify, cartRouter);
-app.use("/admin", authVerify, adminRouter);
+app.use("/cart", cartRouter);
+app.use("/admin", adminRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -39,9 +32,6 @@ app.use((req, res) => {
 app.get("/", (req, res) => {
   res.send("Hello Express app!");
 });
-
-app.use(errorHandler);
-app.use(routeNotFound);
 
 const port = process.env.PORT || 3000;
 
