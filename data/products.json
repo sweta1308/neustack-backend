@@ -1,81 +1,101 @@
 [
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218333/medium-range-sunglasses-gainx-original-imagdezytckqth5z_aqkyfc.webp",
     "item": "Sunglasses",
     "price": 546
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218327/Main_a66bce90-71a9-4c4f-9469-078ec70933e0_800x_gckpz8.webp",
     "item": "Watch",
     "price": 1260
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218318/bruton-trendy-sports-shoes-for-men-blue-product-images-rvrgwpjvsp-0-202209021256_gdpdt7.webp",
     "item": "Shoes",
     "price": 3000
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218313/71p-M3sPhhL_z7onyx.jpg",
     "item": "Laptop",
     "price": 60000
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218295/vivo-t2-5g-db-709x800-1681200173_ghiom2.webp",
     "item": "Mobile",
     "price": 29800
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218288/zoom21811_v6sabm.jpg",
     "item": "TV",
     "price": 20000
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1684089918/2b31239621e74af895eaf9d8b053c7ec_w1000_q90_yh5tjt.webp",
     "item": "Tops",
     "price": 1000
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1684090099/71c365f84627453d8c696e2064fcc9fc_w1000_q90_pobdpz.webp",
     "item": "Jeans",
     "price": 1500
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218279/riddhi-fashion-men-shirt-casual-shirts-navy-blue02-xl-trendy-shirts-men-shirts-shirts-casual-shirt-cotton-shirts-shirt-men-shirt-product-images-rvnszwuiph-0-202211101117_dadigy.webp",
     "item": "Shirt",
     "price": 1200
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218270/girls-trouser_xbvy2r.jpg",
     "item": "Trousers",
     "price": 3100
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218240/Rockerz245V2Pro_Black_sqhkfa.webp",
     "item": "Earphone",
     "price": 1800
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218234/inf_800x_szuca2.webp",
     "item": "Bracelet",
     "price": 200
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218212/BHS397-40_1_qhmrfz.webp",
     "item": "Straightner",
     "price": 2700
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218205/grapesolid_fieldsoflavendercottoncurtain-setof4_1_kqxwhs.webp",
     "item": "Curtains",
     "price": 1900
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218203/1_dlflon.jpg",
     "item": "Table",
     "price": 3000
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218192/sofa_WLCHRATCFVBL_1_hsyuyv.webp",
     "item": "Chair",
     "price": 1600
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218187/istockphoto-490658849-612x612_g69ugy.jpg",
     "item": "Stationary",
     "price": 450
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218184/98193-17VX_F_s8ssto.jpg",
     "item": "Helmet",
     "price": 500
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218165/723e0f8h20002_1_bt9itu.avif",
     "item": "Heels",
     "price": 1100
   },
   {
+    "imgUrl": "https://res.cloudinary.com/sweta-agarwalla/image/upload/v1702218159/635108fb548e6b756a3931e2-iphone-fast-charger-cable-apple-mfi_l8p4cr.jpg",
     "item": "Charger",
     "price": 300
   }

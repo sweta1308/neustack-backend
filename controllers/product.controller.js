@@ -9,10 +9,11 @@ const products = JSON.parse(jsonData);
 const seedProductsDatabase = async () => {
   try {
     for (const product of products) {
-      const { item, price } = product;
+      const { item, price, imgUrl } = product;
       const newProduct = new Item({
         item,
         price,
+        imgUrl
       });
       await newProduct.save();
       console.log(`New product ${item} added`);

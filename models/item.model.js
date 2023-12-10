@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
+  imgUrl: {
+    type: String,
+    required: true,
+  },
   item: {
     type: String,
     required: true,
