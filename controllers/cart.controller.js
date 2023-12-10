@@ -1,22 +1,23 @@
 const User = require("../models/user.model");
 
 // get cart items
-const readCartItems = async (userId) => {
+const readCartItems = async () => {
   try {
-    const user = await User.findById(userId);
-    return user.cart;
+    const user = await User.find({});
+    return user[0].cart;
   } catch (error) {
     throw error;
   }
 };
 
 // add item to the cart
-const addItemToCart = async (userId, product) => {
+const addItemToCart = async (product) => {
   try {
-    const user = await User.findById(userId);
-    const updatedCart = [{ ...product, quantity: 1 }, ...user.cart];
+    const user = await User.find({});
+    const firstUser = user[0];
+    const updatedCart = [{ ...product, quantity: 1 }, ...firstUser.cart];
     const updatedUser = await User.findByIdAndUpdate(
-      userId,
+      firstUser._id,
       {
         $set: { cart: updatedCart },
       },
@@ -24,20 +25,19 @@ const addItemToCart = async (userId, product) => {
     );
     return updatedUser.cart;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 };
 
 // remove item from cart
-const removeItemFromCart = async (userId, productId) => {
+const removeItemFromCart = async (productId) => {
   try {
-    const user = await User.findById(userId);
-    const userCart = user.cart.filter(
+    const user = await User.find({});
+    const userCart = user[0].cart.filter(
       ({ _id }) => _id.toString() !== productId
     );
-    user.cart = userCart;
-    const updatedUser = await user.save();
+    user[0].cart = userCart;
+    const updatedUser = await user[0].save();
     return updatedUser.cart;
   } catch (error) {
     throw error;
@@ -45,10 +45,11 @@ const removeItemFromCart = async (userId, productId) => {
 };
 
 // update quantity of cart item
-const updateQuantityOfCartItem = async (userId, productId, action) => {
+const updateQuantityOfCartItem = async (productId, action) => {
   try {
-    const user = await User.findById(userId);
-    const userCart = user.cart.map((product) => {
+    const user = await User.find({});
+    const firstUser = user[0];
+    const userCart = firstUser.cart.map((product) => {
       if (product._id.toString() === productId) {
         switch (action.type) {
           case "increment":
@@ -62,8 +63,8 @@ const updateQuantityOfCartItem = async (userId, productId, action) => {
         return product;
       }
     });
-    user.cart = userCart;
-    const updatedUser = await user.save();
+    firstUser.cart = userCart;
+    const updatedUser = await user[0].save();
     return updatedUser.cart;
   } catch (error) {
     throw error;

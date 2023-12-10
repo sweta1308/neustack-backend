@@ -1,8 +1,8 @@
 const User = require("../models/user.model");
 
-const checkout = async (userId) => {
+const checkout = async () => {
   try {
-    const user = await User.findById(userId);
+    const user = await User.find({});
     const newObj = {
       order: [],
       discountEligible: false,
@@ -10,10 +10,10 @@ const checkout = async (userId) => {
       totalAmount: 0,
       totalItems: 0,
     };
-    if (user.cart.length > 0) {
-      newObj.order = user.cart;
+    if (user[0].cart.length > 0) {
+      newObj.order = user[0].cart;
     }
-    if (user.orders.length % 4 === 0) {
+    if (user[0].orders.length % 4 === 0) {
       newObj.discountEligible = true;
     }
     const totalPrice = newObj.order.reduce(
@@ -26,8 +26,8 @@ const checkout = async (userId) => {
       0
     );
     newObj.totalItems = totalProducts;
-    user.orders = [{ ...newObj }, ...user.orders];
-    const updatedUser = await user.save();
+    user[0].orders = [{ ...newObj }, ...user[0].orders];
+    const updatedUser = await user[0].save();
     return updatedUser;
   } catch (error) {
     throw error;

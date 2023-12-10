@@ -16,7 +16,7 @@ const seedUsersDatabase = async () => {
       const newUser = new User({
         name,
         email,
-        password,
+        password: hashedPassword,
         cart,
         orders,
       });
@@ -31,38 +31,4 @@ const seedUsersDatabase = async () => {
   }
 };
 
-// signup
-const signup = async (userDetails) => {
-  try {
-    const user = new User({
-      ...userDetails,
-      cart: [],
-      orders: [],
-    });
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(user.password, salt);
-    user.password = hashedPassword;
-    const createdUser = await user.save();
-    return createdUser;
-  } catch (error) {
-    console.error("Error saving user:", error);
-    throw error;
-  }
-};
-
-// login
-const login = async (email, password) => {
-  try {
-    const foundUser = await User.findOne({ email });
-    const passwordMatch = await bcrypt.compare(password, foundUser.password);
-    if (foundUser && passwordMatch) {
-      return foundUser;
-    } else {
-      throw new Error("Invalid credentials.");
-    }
-  } catch (error) {
-    throw error;
-  }
-};
-
-module.exports = { seedUsersDatabase, signup, login };
+module.exports = seedUsersDatabase;
